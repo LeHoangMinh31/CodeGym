@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Validate Email</title>
+ <script type="text/javascript">
+    function checkEmail() {
+        var email = document.getElementById('email');
+        var filter = /^[_a-z0-9]{6,}$/;
+        if (!filter.test(account.value)) {
+            alert('Hay nhap account hop le.\n123abc_');
+            email.focus;
+            return false;
+        }
+        else
+        {
+            alert('OK roi day, Account nay hop le.');
+        }
+    }
+</script>
+</head>
+<body>
+    <form name="form1" id="form1" method="post">
+        <input type="text" name="account" id="account" size="40">
+        <input type="button" name="check" value="Check" onclick="checkAccount();">
+    </form>
+</body>
+</html>
