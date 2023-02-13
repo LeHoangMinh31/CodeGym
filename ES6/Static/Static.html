@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Information {
+  name;
+  description;
+  number = 1;
+  constructor(name, description, number) {
+    this.name = name;
+    this.description = description;
+    this.number = number;
+  }
+  calc(number) {
+    
+    return this.number * 3;
+  }
+
+  
+}
+class Geometry extends Information {
+  width;
+  constructor(width, name, description, number) {
+    super(name, description, number);
+    this.width = width;
+  }
+}
+
+geometry = new Geometry()
+document.getElementById("demo").innerHTML = geometry.calc();
+
+    </script>
+</body>
+</html>

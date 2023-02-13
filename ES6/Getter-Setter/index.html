@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  getName() {
+    return this.name;
+  }
+
+  setName(val) {
+    this.name = val;
+  }
+  walk() {
+    return "walk ";
+  }
+}
+
+class Programmer extends Person {
+  constructor(language, name) {
+    super(name);
+    this.language = language;
+  }
+  getLanguage() {
+    return this.language;
+  }
+
+  setLanguage(val) {
+    this.language = val;
+  }
+  writeCode() {
+    return this.getName() + " " + this.getLanguage();
+  }
+}
+
+programmer = new Programmer("ReactJS", "Minh");
+document.getElementById("demo").innerHTML = programmer.writeCode();
+
+    </script>
+</body>
+</html>
